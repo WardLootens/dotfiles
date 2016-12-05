@@ -21,8 +21,8 @@ elseif has('mac')
 elseif has('unix')
 	"source $VIMRUNTIME/vimrc_example.vim
 	source $VIMRUNTIME/mswin.vim
-	source $HOME\.vim\vimrc_ward.vim
-	source $HOME\.vim\vimrc_testtools
+	source $HOME/.vim/vimrc_ward.vim
+	source $HOME/.vim/vimrc_testtools
 
 	set backupdir=/c/Users/wardl/.vim/backup_files//
 	set directory=/c/Users/wardl/.vim/swap_files//
