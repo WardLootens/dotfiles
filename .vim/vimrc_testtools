@@ -1,0 +1,6 @@
+let $PATH .= ';e:\tools\communication'
+
+noremap <c-s-m> :exe "silent !msgs -S " . $port . " -F % & pause"
+noremap <c-s-p> :exe "silent !apt -S " . $port . " -N WL_Translator -r %"
+
+
