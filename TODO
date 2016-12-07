@@ -1,0 +1,4 @@
+    [ ] Use vundle instead of Pathogen
+        http://blog.thomasupton.com/2014/02/migrating-from-pathogen-to-vundle/
+        Cross platform?
+        Or vim-plug ?
