@@ -12,6 +12,7 @@ if has('win32') || has('win64')
 	source $VIMRUNTIME\mswin.vim
 	source $HOME\.vim\vimrc_ward.vim
 	source $HOME\.vim\vimrc_testtools
+	source $HOME\.vim\hl7.vim
 
 	set backupdir=c:\Users\wardl\.vim\backup_files\\
 	set directory=c:\Users\wardl\.vim\swap_files\\

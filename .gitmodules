@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/vim-sensible"]
 	path = .vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule ".vim/bundle/vim-hl7"]
+	path = .vim/bundle/vim-hl7
+	url = https://github.com/niquola/vim-hl7
