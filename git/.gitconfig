@@ -1,0 +1,84 @@
+[difftool "sourcetree"]
+	cmd = 'c:/workspace/opt/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'c:/workspace/opt/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Ward Lootens
+	email = wardl@mips.be
+[push]
+	default = current
+[mergetool]
+	prompt = false
+[difftool]
+	prompt = false
+[core]
+	autocrlf = true
+	excludesfile = $HOME/.gitignore_global
+	preloadindex = true	
+[diff]
+	tool = bc3
+	guitool = bc3
+	algorithm = histogram
+	compactionHeuristic = true
+	indentHeuristic = true
+[difftool "bc3"]
+	cmd = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\" \"$LOCAL\" \"$REMOTE\"
+	path = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\"
+[mergetool "bc3"]
+	path = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\"
+	cmd = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[gc]
+	auto = 256
+[credential]
+	helper = wincred
+[alias]
+    au = update-index --assume-unchanged 
+    nau = update-index --no-assume-unchanged 
+    backup = branch -f wardl/backup
+    check = diff wardl/backup
+    logg = log --graph --color --date=short --pretty=format:\"%x1b[31m%h%x09%x1b[33m%ad%x20%x1b[34m%<(12,trunc)%an%x1b[32m%d%x1b[0m%x20%s\"
+	logm = log --graph --color --date=short --pretty=format:\"%x1b[31m%h%x09%x1b[33m%ad%x20%x1b[34m%<(12,trunc)%an%x1b[32m%d%x1b[0m%x20%s HEAD master\"
+	log95 = log --graph --color --date=short --pretty=format:\"%x1b[31m%h%x09%x1b[33m%ad%x20%x1b[34m%<(12,trunc)%an%x1b[32m%d%x1b[0m%x20%s\" HEAD Glims_9_5
+	last = log -1 HEAD
+	pom = pull origin master
+	cfg = config --global --edit
+	co = checkout
+	co95g = checkout Glims_9_5
+	co96 = checkout CYBERLABV96
+	co97 = checkout CYBERLABV97
+	co98 = checkout CYBERLABV98
+	co99 = checkout CYBERLABV99
+	co910 = checkout CYBERLABV9_10
+	co911 = checkout CYBERLABV9_11
+	cob = "!f(){ git branch | grep $1 | grep -v TEMP | xargs git checkout; }; f"
+	com = checkout master
+	col = checkout @{-1}
+	db = "!f(){ git branch | grep $1 | grep -v TEMP | xargs git branch -D; }; f"
+	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+    show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+	rb98 = rebase CYBERLABV98
+	rb99 = rebase CYBERLABV99
+	rb910 = rebase CYBERLABV9_10
+	rb911 = rebase CYBERLABV9_11
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase -i
+	rbi98 = !git rebase -i $(git merge-base CYBERLABV98 HEAD)
+	rbi99 = !git rebase -i $(git merge-base CYBERLABV99 HEAD)
+	rbi910 = !git rebase -i $(git merge-base CYBERLABV9_10 HEAD)
+	rbi911 = !git rebase -i $(git merge-base CYBERLABV9_11 HEAD)
+	rbic911 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_11 HEAD)
+	pfwl = push --force-with-lease
+	mrg = merge --no-ff --no-edit @{-1}
+    merge-no-ff = merge --no-ff
+	push-upstream= push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+	undo = reset --hard HEAD^
+	ignored = !echo "Ignored files:" && git ls-files -v | grep "^[[:lower:]]" | awk '{print $2}'
+    restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+    most-changed = !git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -25
+[mailmap]
+     file = $HOME/.gitmailmap
+[rebase]
+	autostash = true
