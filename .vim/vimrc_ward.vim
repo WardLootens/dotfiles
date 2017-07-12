@@ -49,6 +49,7 @@ set nobackup
 "set noswapfile
 
 " remap some keys
+"inoremap jk <ESC>
 nnoremap ; :
 " nnoremap n i<CR><ESC>
 
@@ -58,11 +59,13 @@ noremap <c-s-down> ddp
 "noremap <c-s-l> :echo strlen(getline('.'))<CR>
 "noremap <c-s-l> <ESC> strlen(getline('.')) a - <ESC> a
 
-" Underline the current line with dashes in normal mode
-nnoremap <c-s-l> yyp<c-v>$r-
+" Underline the current line in normal mode
+nnoremap <c-l> yyp<c-v>$r-
+nnoremap <c-l><c-l> yyp<c-v>$r=
 
-" Underline the current line with dashes in insert mode
-inoremap <c-s-l> <Esc>yyp<c-v>$r-A
+" Underline the current line in insert mode
+inoremap <c-l> <Esc>yyp<c-v>$r-A
+inoremap <c-l><c-l> <Esc>yyp<c-v>$r=A
 
 " Checkboxes
 inoremap [[ [ ] 
@@ -79,6 +82,8 @@ nnoremap rw 0cwreword<Esc>
 nnoremap cif gg"kyt:<CR>:!mkdir u:\glims\incidents\<c-r>k<CR>:w u:\glims\incidents\<c-r>k\<c-r>k_info.txt<CR>
 
 "noremap <c-s-i> :!mkdir u:\glims\incidents\<c-r>a
+"Surround with <u> tags
+nmap <S-U> ysiw<u>
 
 " TODO: review
 
