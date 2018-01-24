@@ -19,15 +19,20 @@ if has('win32') || has('win64')
 	set undodir=c:\Users\wardl\.vim\undo_files\\
 
 elseif has('mac')
+	source $HOME/.vim/vimrc_ward.vim
+
+	set backupdir=$HOME/.vim/backup_files/
+	set directory=$HOME/.vim/swap_files/
+	set undodir=$HOME/.vim/undo_files/
+
 elseif has('unix')
 	"source $VIMRUNTIME/vimrc_example.vim
 	source $VIMRUNTIME/mswin.vim
 	source $HOME/.vim/vimrc_ward.vim
-	source $HOME/.vim/vimrc_testtools
 
-	set backupdir=/c/Users/wardl/.vim/backup_files//
-	set directory=/c/Users/wardl/.vim/swap_files//
-	set undodir=/c/Users/wardl/.vim/undo_files//
+	set backupdir=$HOME/.vim/backup_files/
+	set directory=$HOME/.vim/swap_files/
+	set undodir=$HOME/.vim/undo_files/
 
     "mode dependent cursor
     let &t_ti.="\e[1 q"
