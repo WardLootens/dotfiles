@@ -2,8 +2,8 @@ setx HOME %USERPROFILE%
 
 cd %HOME%
 
-mklink /H _vimrc .dotfiles\.vimrc
-mklink /J .vim .dotfiles\.vim
+mklink /H _vimrc .dotfiles\vim\.vimrc
+mklink /J .vim .dotfiles\vim\.vim
 
 mklink /H .minttyrc .dotfiles\mintty\.mintty
 mklink /J .mintty .dotfiles\mintty\.mintty
