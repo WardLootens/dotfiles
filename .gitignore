@@ -1,5 +1,6 @@
 vim/.vim/autoload/plug.vim
 vim/.vim/plugged
 vim/.vim/backup_files
+vim/.vim/sessions
 vim/.vim/swap_files
 vim/.vim/undo_files
