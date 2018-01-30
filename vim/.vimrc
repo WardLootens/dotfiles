@@ -6,8 +6,7 @@ endif
 "execute pathogen#infect()
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  execute 'silent !curl -fLo' shellescape(fnamemodify('~/.vim/autoload/plug.vim', ':p')) '--create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
