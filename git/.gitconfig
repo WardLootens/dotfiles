@@ -12,8 +12,11 @@
 	prompt = false
 [difftool]
 	prompt = false
+[include]
+    path = .gitconfig.os
+    path = .gitconfig.local
 [core]
-	autocrlf = input
+#	autocrlf = input
 	excludesfile = $HOME/.gitignore_global
 	preloadindex = true	
 [diff]
