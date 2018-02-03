@@ -13,7 +13,7 @@
 [difftool]
 	prompt = false
 [core]
-	autocrlf = true
+	autocrlf = input
 	excludesfile = $HOME/.gitignore_global
 	preloadindex = true	
 [diff]
