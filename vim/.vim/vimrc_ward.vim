@@ -68,10 +68,12 @@ noremap <c-s-down> ddp
 " Underline the current line in normal mode
 nnoremap <c-l> yyp<c-v>$r-
 nnoremap <c-l><c-l> yyp<c-v>$r=
+nnoremap <c-l><c-l><c-l> yyp<c-v>$r~
 
 " Underline the current line in insert mode
 inoremap <c-l> <Esc>yyp<c-v>$r-A
 inoremap <c-l><c-l> <Esc>yyp<c-v>$r=A
+inoremap <c-l><c-l><c-l> <Esc>yyp<c-v>$r~A
 
 " Checkboxes
 inoremap [[ [ ] 
