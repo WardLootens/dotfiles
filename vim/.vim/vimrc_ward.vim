@@ -33,6 +33,12 @@ set et
 set si
 
 set laststatus=2 "display the status line always
+
+" Show file encoding in status line
+if has("statusline")
+ set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif
+
 set backspace=2 " make backspace work like most other apps
 
 set number
