@@ -1,5 +1,10 @@
 
-nnoremap <C-h> :call SetHL7StatusLine()<CR>
+nnoremap <C-h> :call ActivateHL7()<CR>
+
+function! ActivateHL7()
+    call SetHL7StatusLine()
+    set syntax=hl7
+endfunction
 
 function! SetHL7StatusLine()
   set statusline=%<%f\ (HL7:\ %{HL7SegmentInfo()})\ %h%m%r%=\ %-14.(%l,%c%V%)\ %P
