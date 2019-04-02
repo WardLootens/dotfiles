@@ -77,9 +77,9 @@ inoremap <c-l><c-l><c-l> <Esc>yyp<c-v>$r~A
 
 " Checkboxes
 inoremap [[ [ ] 
-nnoremap [[ 0li[ ] <Esc>
-inoremap ]] <Esc>0f[lix<Del>
-nnoremap ]] 0f[lix<Del><Esc>
+nnoremap [[ 0i[ ] <Esc>
+inoremap ]] <Esc>0f[lix<Del><Down>
+nnoremap ]] 0f[lix<Del><Down><Esc>
 
 " Some shortcuts for git rebase -i
 nnoremap fu 0cwfixup<Esc>
