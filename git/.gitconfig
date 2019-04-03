@@ -1,8 +1,6 @@
-[difftool "sourcetree"]
-	cmd = 'c:/workspace/opt/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-	cmd = 'c:/workspace/opt/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-	trustExitCode = true
+[include]
+    path = .gitconfig.os
+    path = .gitconfig.local
 [user]
 	name = Ward Lootens
 	email = wardl@mips.be
@@ -12,9 +10,6 @@
 	prompt = false
 [difftool]
 	prompt = false
-[include]
-    path = .gitconfig.os
-    path = .gitconfig.local
 [core]
 #	autocrlf = input
 	excludesfile = $HOME/.gitignore_global
@@ -25,13 +20,6 @@
 	algorithm = histogram
 	compactionHeuristic = true
 	indentHeuristic = true
-[difftool "bc3"]
-	cmd = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\" \"$LOCAL\" \"$REMOTE\"
-	path = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\"
-[mergetool "bc3"]
-	path = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\"
-	cmd = \"C:/workspace/opt/Beyond Compare 3/Bcompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-	trustExitCode = true
 [gc]
 	auto = 256
 [alias]
