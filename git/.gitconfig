@@ -20,6 +20,8 @@
 	algorithm = histogram
 	compactionHeuristic = true
 	indentHeuristic = true
+[diff "zip"]
+    textconv = unzip -c -a -q
 [gc]
 	auto = 256
 [alias]
