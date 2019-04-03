@@ -13,7 +13,7 @@ goto :choice
 
 :create_links
 
-mklink /H _vimrc .dotfiles\vim\.vimrc
+mklink /H .vimrc .dotfiles\vim\.vimrc
 mklink /J .vim .dotfiles\vim\.vim
 
 mklink /H .minttyrc .dotfiles\mintty\.minttyrc
@@ -31,11 +31,12 @@ goto :eof
 :delete_existing_files
 REM Hard links do not seem to work properly, so for now add option to remove file
 del _vimrc
+del .vimrc
 del .minttyrc
 del .gitconfig
 del .gitconfig.os
-del .gitignore_global
-del .gitmailmap
+REM del .gitignore_global
+REM del .gitmailmap
 
 goto :create_links
 
