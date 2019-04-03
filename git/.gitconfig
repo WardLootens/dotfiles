@@ -3,7 +3,6 @@
     path = .gitconfig.local
 [user]
 	name = Ward Lootens
-	email = wardl@mips.be
 [push]
 	default = current
 [mergetool]
