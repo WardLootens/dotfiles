@@ -17,7 +17,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 Plug 'niquola/vim-hl7'
+Plug 'RRethy/vim-illuminate'
 call plug#end()
 " </vim-plug plugins>
 
