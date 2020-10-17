@@ -1,0 +1,28 @@
+# see 'man git-shortlog' for more details
+# formats: Proper Name [<proper@email.xx> [Commit Name]] <commit@email.xx>
+#
+Dimitri Dewaele <dimitridw@mips.be> Dimitri Dewaele <dimitri.dewaele@mips.be>
+Christophe Bonte <christophe@mips.be> christop <>
+Christophe Bonte <christophe@mips.be> christophe <>
+Christophe Bonte <christophe@mips.be> Christophe Bonte <christophe.bonte@mips.be>
+David De Beule <david@mips.be> david <>
+Dieter Hubeau <dieterh@mips.be> dieterh <>
+Dimitri Dewaele <dimitridw@mips.be> dimitridw <>
+Henri De Cannière <henridc@mips.be> henridc <>
+Inge Verbrugghe <ingev@mips.be> ingev <>
+Isabelle Soen <isabelles@mips.be> isabelles <>
+Jan Sem <jansem@mips.be> jansem <>
+John Victor <johnv@mips.be> john <>
+Jurn Remes <jurnr@mips.be> jurnr <>
+Koen Pollentier <koenp@mips.be> koenp <>
+Koen Van Boxstael <koenvb@mips.be> koenvb <>
+Koen Van Parys <koenvp@mips.be> koenvp <>
+Kristof Neirynck <kristof@mips.be> kristof <>
+Lieven Van Poucke <lieven@mips.be> lieven <>
+Maarten Mortier <maartenm@mips.be> maartenm <>
+Marit Vervaet <maritv@mips.be> marit <>
+Miguel Polfliet <miguel@mips.be > miguel <>
+Rose Vandersteene <rosev@mips.be> rosev <>
+Sofie Huylebroeck <sofie@mips.be> sofie <>
+Steven Verstrepen <stevenv@mips.be> stevenv <>
+Tom Catteau <tomc@mips.be> tomc <>

@@ -24,6 +24,9 @@ mklink /H .gitconfig.os .dotfiles\git-win\.gitconfig.os
 mklink /H .gitignore_global .dotfiles\git\.gitignore_global
 mklink /H .gitmailmap .dotfiles\git\.gitmailmap
 
+mklink "%HOME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ditto.ahk" .dotfiles\ahk\ditto.ahk
+mklink "%HOME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\clipboard-actions.ahk" .dotfiles\ahk\clipboard-actions.ahk
+
 popd
 
 goto :eof
