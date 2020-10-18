@@ -11,7 +11,7 @@
 	prompt = false
 [core]
 #	autocrlf = input
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	preloadindex = true	
 [diff]
 	tool = bc3
