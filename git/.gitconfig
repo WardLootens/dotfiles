@@ -55,6 +55,7 @@
 	co912 = checkout CYBERLABV9_12
 	co913 = checkout CYBERLABV9_13
 	co100 = checkout CYBERLABV10_0
+	co101 = checkout CYBERLABV10_1
 	cob = "!f(){ git branch | grep $1 | grep -v TEMP | xargs git checkout; }; f"
 	cor = "!f(){ git branch -r | grep $1 | grep -v TEMP | xargs git checkout -t; }; f"
 	com = checkout master
@@ -62,6 +63,7 @@
 	db = "!f(){ git branch | grep $1 | grep -v TEMP | xargs git branch -D; }; f"
     ddl = "!f(){ git diff $1^ $1 --unified=0 -- db/windows/oracle/12c | grep '^+' | sed 's/+++.*//' | sed 's/^+\\(.*\\)/\\1/' | sed 's/\\(.*\\);/\"\\1\",/' | sed 's/^\\s*\\([^\"].*\\)/\"\\1\" +/' | clip; }; f"
     #ddl = "!f(){ git diff $1^ $1 --unified=0 -- db/windows/oracle/12c | grep '^+' | sed 's/+++.*//' | sed 's/\\(.*\\)/\\1/' ; }; f"
+	diffstat = !git diff --stat $(git merge-base CYBERLABV10_1 HEAD) -- . ':(exclude)**Test.java'
     dirdiff = difftool --dir-dif
 	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
     show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
@@ -72,6 +74,7 @@
 	rb912 = rebase CYBERLABV9_12
 	rb913 = rebase CYBERLABV9_13
 	rb100 = rebase CYBERLABV10_0
+	rb101 = rebase CYBERLABV10_1
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase -i
@@ -82,10 +85,12 @@
 	rbi912 = !git rebase -i $(git merge-base CYBERLABV9_12 HEAD)
 	rbi913 = !git rebase -i $(git merge-base CYBERLABV9_13 HEAD)
 	rbi100 = !git rebase -i $(git merge-base CYBERLABV10_0 HEAD)
+	rbi101 = !git rebase -i $(git merge-base CYBERLABV10_1 HEAD)
 	rbic911 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_11 HEAD)
     rbic912 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_12 HEAD)
     rbic913 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_13 HEAD)
     rbic100 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV10_0 HEAD)
+    rbic101 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV10_1 HEAD)
 	rbir = !git rebase -i $(git tracked)
     reflogg = !git log --pretty=oneline --abbrev-commit --graph --decorate `git reflog | head -n 200 | grep wardl | cut -d ' ' -f 1`
 	pfwl = push --force-with-lease
