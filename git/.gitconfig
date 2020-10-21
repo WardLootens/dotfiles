@@ -56,6 +56,7 @@
 	co913 = checkout CYBERLABV9_13
 	co100 = checkout CYBERLABV10_0
 	co101 = checkout CYBERLABV10_1
+	co102 = checkout CYBERLABV10_2
 	cob = "!f(){ git branch | grep $1 | grep -v TEMP | xargs git checkout; }; f"
 	cor = "!f(){ git branch -r | grep $1 | grep -v TEMP | xargs git checkout -t; }; f"
 	com = checkout master
@@ -75,6 +76,7 @@
 	rb913 = rebase CYBERLABV9_13
 	rb100 = rebase CYBERLABV10_0
 	rb101 = rebase CYBERLABV10_1
+	rb102 = rebase CYBERLABV10_2
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase -i
@@ -86,11 +88,13 @@
 	rbi913 = !git rebase -i $(git merge-base CYBERLABV9_13 HEAD)
 	rbi100 = !git rebase -i $(git merge-base CYBERLABV10_0 HEAD)
 	rbi101 = !git rebase -i $(git merge-base CYBERLABV10_1 HEAD)
+	rbi102 = !git rebase -i $(git merge-base CYBERLABV10_2 HEAD)
 	rbic911 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_11 HEAD)
     rbic912 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_12 HEAD)
     rbic913 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV9_13 HEAD)
     rbic100 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV10_0 HEAD)
     rbic101 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV10_1 HEAD)
+    rbic102 = !git rebase -i --no-autosquash $(git merge-base CYBERLABV10_2 HEAD)
 	rbir = !git rebase -i $(git tracked)
     reflogg = !git log --pretty=oneline --abbrev-commit --graph --decorate `git reflog | head -n 200 | grep wardl | cut -d ' ' -f 1`
 	pfwl = push --force-with-lease
