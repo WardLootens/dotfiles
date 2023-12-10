@@ -1,4 +1,4 @@
-*.swp
+.swp
 *.r
 jar/barbecue-1.5-beta1-LICENSE.txt
 jar/barbecue-1.5-beta1.jar
@@ -127,6 +127,8 @@ conf/HL7_GLIMS_OML_homl_wl.java
 products/cyberlab/src/be/mips/cyberlab/playground/
 conf/HL7ORUOUTCUM.java
 conf/HL7TBR.java
+conf/WL_*.java
+conf/WL_*.xml
 web/jsp/playground/
 web/last_results_post.html
 web/last_results_post2.html
@@ -151,6 +153,7 @@ web/Customer/1'product.gif
 #*.iml
 playground/
 development/web/temp.html
+development/web/playground_*
 ./conf/db.conf.custom.*
 web/Licensev910.jsp
 .idea/runConfigurations/Upgrader.xml
@@ -194,19 +197,20 @@ conf/XDT_IN_Patient.xml
 conf/XDT_IN_PATIENT.java
 .idea/runConfigurations/StartDaemon___wl_houl.xml
 .idea/runConfigurations/wl___*
+.idea/runConfigurations/wl_*
 eclipse.exe - Shortcut.lnk
 .idea/httpRequests/
 iml-ro.bat
 #.idea/uiDesigner.xml
-web/WEB-INF/keycloak.json
+#web/WEB-INF/keycloak.json
 build-ward.cmd
 build-war-test-it.cmd
 .git_old/
 .git_new_old/
 .idea/runConfigurations/apache_tomcat_8_5_8_v912___iis.xml
 patch*.diff
-init.bat
 war.cmd
+warct.cmd
 .idea/runConfigurations/Scratch.xml
 warp.cmd
 gitcommit.bat
@@ -214,4 +218,14 @@ css.cmd
 products/cyberlab-ap-perf-tests/report/report3.html
 .idea/sqldialects.xml
 .idea/runConfigurations/apache_tomcat_8_5_32_v100__be1_dev_perf1*.xml
+.idea.bak*
 db.conf.custom.*
+mailconfig.custom.*.properties
+smsconfig.custom.*.properties
+.idea/shelf - Copy/
+web/Customer/wl_*
+.idea/deployment.xml
+/mvn-*.cmd
+/wl_*.bat
+/wl_dir_*.txt
+/commit-mb.sh
